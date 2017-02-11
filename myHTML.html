@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>MyWEB.in</title>
+	<script type="text/javascript" src="codeFor.js"></script>
+</head>
+<body>
+<h1 onmouseover="this.style.color='red';" onmouseout="this.style.color='black';">JavaScript_Operatons</h1>
+<button onmouseover="this.style.color='blue';" onmouseout="this.style.color='black';" onclick="addition();">Addition</button>
+<button onmouseover="this.style.color='blue';" onmouseout="this.style.color='black';" onclick="Sub();">Subtract</button>
+<button onmouseover="this.style.color='blue';" onmouseout="this.style.color='black';" onclick="Mul();">Multiplication</button>
+<button onmouseover="this.style.color='blue';" onmouseout="this.style.color='black';" onclick="Divi();">Division</button><hr><br>
+<button onmouseover="this.style.color='blue';" onmouseout="this.style.color='black';" onclick="enterInfo();">My Info.</button><br><hr>
+<a>Enter your details</a><br>
+<input type="text" name="usrTxt" placeholder="username" id="usrnm" />
+<input type="button" name="usrBt" value="Check" onclick="checkUsername();" onmouseover="this.style.color='blue';" onmouseout="this.style.color='black';"/>
+<div id="here"></div>
+<script>
+		function checkUsername(){
+			var userName = document.getElementById("usrnm");
+			if (userName.length<=10) {
+				document.getElementById("here").innerHTML="Username Weak!";
+			}
+		}
+</script>
+</body>
+</html>

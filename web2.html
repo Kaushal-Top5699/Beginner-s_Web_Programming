@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>trAns/root/private///file.com</title>
+	<script>
+		function validateName(){
+			var name = document.getElementById('text1');
+			var pattern = /^[a-zA-Z]+$/;
+			var found = name.value.match(pattern);
+			//var found = pattern.exec(name.value);
+			if (name.value == "") {
+				document.getElementById('msg1').style.color = "Red";
+				document.getElementById('msg1').innerHTML = "Field cannot be empty";
+			} else {
+				if (!found) {
+					document.getElementById('msg1').style.color = "Red";
+					document.getElementById('msg1').innerHTML = "Enter only string!";
+				} else {
+					document.getElementById('msg1').style.color = "blue";
+					document.getElementById('msg1').innerHTML = "Correct";
+				}
+			}
+		}
+	</script>
+</head>
+<form>
+	Enter name : <input type="text" id="text1" onclick="validateName();" placeholder="Name">
+	<div id="msg1"></div>
+</form>
+<body>
+</body>
+</html>
