@@ -1,5 +1,5 @@
-<!-- Author: Kaushal
-	 Date: 11/02/2017-->
+/*       Author: Kaushal Topinkatti B
+	 Date: 09/02/2017                 */
 function changeToGreen()
 {
 	document.getElementById("h2color").style.color="green";
