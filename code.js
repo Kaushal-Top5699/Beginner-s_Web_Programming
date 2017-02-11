@@ -1,3 +1,5 @@
+<!-- Author: Kaushal
+	 Date: 11/02/2017-->
 function changeToGreen()
 {
 	document.getElementById("h2color").style.color="green";
