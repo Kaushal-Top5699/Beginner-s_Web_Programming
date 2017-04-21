@@ -1,0 +1,160 @@
+<!DOCTYPE html><!-- Author: Kaushal Topinkatti B.   Date: 20/04/2017 -->
+<html>
+<head><!-- Ignore the CSS and focus on JavaScript-->
+		<!-- Ignore the CSS and focus on JavaScript-->
+		<!-- Ignore the CSS and focus on JavaScript-->
+		<!-- Ignore the CSS and focus on JavaScript-->
+		<!-- Ignore the CSS and focus on JavaScript-->
+		<!-- Ignore the CSS and focus on JavaScript-->
+		<!-- Ignore the CSS and focus on JavaScript-->
+		<style>
+			button {
+				background-color: lightgray;
+				color: black;
+				border: none;
+    			padding: 10px 30px;
+    			text-align: center;
+    			text-decoration: none;
+    			display: inline-block;
+    			font-size: 13px;
+    			margin: 4px 2px;
+    			cursor: pointer;
+    			border-radius: 5px;
+			}
+			button:hover {
+				background-color: gray;
+				color: white;
+			}
+			h4, h1 {
+				font-family: arial;
+			}
+		</style>
+		<!-- Ignore the CSS and focus on JavaScript-->
+		<!-- Ignore the CSS and focus on JavaScript-->
+		<!-- Ignore the CSS and focus on JavaScript-->
+		<!-- Ignore the CSS and focus on JavaScript-->
+		<!-- Ignore the CSS and focus on JavaScript-->
+		<!-- Ignore the CSS and focus on JavaScript-->
+		<!-- Ignore the CSS and focus on JavaScript-->
+		<!-- Ignore the CSS and focus on JavaScript-->
+		<!-- Ignore the CSS and focus on JavaScript-->
+	<title>JavaScript Arrays</title>
+
+</head>
+<body>
+<h1>Click the buttons to get different array types</h1>
+<h4>Arrays without using for loop</h4>
+<button onclick="array1()">Array: 1</button><br>
+<button onclick="array2()">Array: 2</button><br>
+<button onclick="accessArrayTypes()">To access only Krishna</button><br>
+<button onclick="array3()">Array: 3</button><br>
+<button onclick="array4()">Array: 4</button><br>
+<button onclick="array5()">Array: 5</button><br>
+<button onclick="arrayFunctions()">Array: Functions</button>
+<p id="demo"></p><br><br><hr>
+<h4>Arrays accessed using loops</h4>
+<button onclick="arrayFor1()">Array: 1</button><br>
+<button onclick="arrayFor2()">Array: 2</button><br>
+<button onclick="arrayForIn()">Array: 3</button><br>
+<p id="demo2"></p>
+
+
+
+
+<!-- The main program begins from here -->
+<!-- The given arrays are without for loop -->
+<!-- Focus on javascript dont look at CSS -->
+<script>
+		function array1() {
+			var person = ["Kaushal", "Topinkatti", "19"]; //simple array
+			document.getElementById("demo").innerHTML = person;
+		}
+
+
+		function array2() {
+			var person = new Array("Krishna", "Gavas", "19"); //array type 2
+			document.getElementById("demo").innerHTML = person;
+		}
+
+
+		function accessArrayTypes() {
+			var person = ["Krishna", "Gavas", "19"];
+			document.getElementById("demo").innerHTML = person[0]; //reads only krishna
+		}
+
+
+		function array3() {
+			var person = {firstName:"Ketan", lastName:"Patwardhan", age:19}; //objects 
+			document.getElementById("demo").innerHTML = person["firstName"]; //reads only ketan
+		}
+
+
+		function array4() {
+			var fruits = ["Kaushal", "Krishna", "Ketan", "Kishore"];
+			document.getElementById("demo").innerHTML = fruits.length; //gets the length of the array
+		}
+
+
+		function array5() {
+			var students, text, stLen, i; //variables
+
+			students = ["Kaushal", "Krishna", "Ketann", "Keertan"]; //array
+			stLen = students.length; //variable storing array length
+			text = "<ul>";
+			for (i = 0; i < stLen; i++) {					//loop to read elements within array
+    				text += "<li>" + students[i] + "</li>";
+				}
+			text += "</ul>";
+			document.getElementById("demo").innerHTML = text; //finally printing the array
+		}
+
+
+		function arrayFunctions() {
+			var person = ["Kaushal", "Krishna", "Ketan"]; //simple array
+			document.getElementById("demo").innerHTML = person;
+
+			person.push("Keertan"); //adds an extra element to array list
+			document.getElementById("demo").innerHTML = person;
+		}
+
+		//Array access using for loop
+
+		function arrayFor1() {   //this function prints out the array
+			var cars = ["BMW", "Volvo", "Saab", "Ford", "Fiat", "Audi"];  
+			var text = "";
+			var i;
+			for (i = 0; i < cars.length; i++) {
+    		text += cars[i] + "<br>";
+			}
+			document.getElementById("demo2").innerHTML = text;
+		}
+
+
+
+		function arrayFor2() {   
+			var cars = ["BMW", "Volvo", "Saab", "Ford", "Fiat", "Audi"];  
+			var text = "";
+			var i;
+			for (i = 3; i < cars.length; i++) {    //prints from index 3
+    		text += cars[i] + "<br>";
+			}
+			document.getElementById("demo2").innerHTML = text;
+		}
+
+
+
+		function arrayForIn() {
+			var txt = "";
+			var person = {fname:"Kaushal", lname:"Topinkatti", age:19}; 
+			var x;
+			for (x in person) {             //for in loop 
+    			txt += person[x] + " ";
+			}
+			document.getElementById("demo2").innerHTML = txt;
+		}
+	
+</script>
+
+
+</body>
+</html>
